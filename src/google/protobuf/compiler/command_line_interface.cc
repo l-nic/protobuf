@@ -206,7 +206,8 @@ bool GetProtocAbsolutePath(string* path) {
   }
 #else
   char buffer[PATH_MAX];
-  int len = readlink("/proc/self/exe", buffer, PATH_MAX);
+  //int len = readlink("/proc/self/exe", buffer, PATH_MAX);
+  int len = 0;
 #endif
   if (len > 0) {
     path->assign(buffer, len);

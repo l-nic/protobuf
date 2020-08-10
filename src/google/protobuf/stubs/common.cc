@@ -45,7 +45,7 @@
 #elif defined(HAVE_PTHREAD)
 #include <pthread.h>
 #else
-#error "No suitable threading library available."
+//#error "No suitable threading library available."
 #endif
 #if defined(__ANDROID__)
 #include <android/log.h>

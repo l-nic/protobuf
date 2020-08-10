@@ -261,6 +261,7 @@ libprotobuf_la_SOURCES =                                       \
   google/protobuf/io/zero_copy_stream_impl.cc                  \
   google/protobuf/compiler/importer.cc                         \
   google/protobuf/compiler/parser.cc                           \
+  google/protobuf/compiler/broken_syscalls.cc                  \
   google/protobuf/util/delimited_message_util.cc               \
   google/protobuf/util/field_comparator.cc                     \
   google/protobuf/util/field_mask_util.cc                      \

@@ -62,14 +62,14 @@ namespace internal {
 class PROTOBUF_EXPORT WrappedMutex {
  public:
   WrappedMutex() = default;
-  void Lock() GOOGLE_PROTOBUF_ACQUIRE() { mu_.lock(); }
-  void Unlock() GOOGLE_PROTOBUF_RELEASE() { mu_.unlock(); }
+  void Lock() GOOGLE_PROTOBUF_ACQUIRE() { /*mu_.lock();*/ }
+  void Unlock() GOOGLE_PROTOBUF_RELEASE() { /*mu_.unlock();*/ }
   // Crash if this Mutex is not held exclusively by this thread.
   // May fail to crash when it should; will never crash when it should not.
   void AssertHeld() const {}
 
  private:
-  std::mutex mu_;
+  //std::mutex mu_;
 };
 
 using Mutex = WrappedMutex;

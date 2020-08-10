@@ -38,10 +38,13 @@ namespace google {
 namespace protobuf {
 namespace internal {
 
-using once_flag = std::once_flag;
+class once_flag {
+  
+};
+
 template <typename... Args>
-void call_once(Args&&... args ) {
-  std::call_once(std::forward<Args>(args)...);
+void call_once(once_flag& flag, Args&&... args ) {
+  std::invoke(std::forward<Args>(args)...);
 }
 
 }  // namespace internal
